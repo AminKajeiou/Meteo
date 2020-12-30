@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Méteo</title>
+    <div th:insert="navbar :: nav"></div>
+
+</head>
+<body>
+
+    <li>Auteur :</li>
+    <p th:text="${adresse.auteur}"></p>
+    <li>Adresse :</li>
+    <p th:text="${adresse.content}"></p>
+    <li>La température en Celsius à l'instant est :</li>
+    <p th:text="${temp}"></p>
+
+</body>
+</html>

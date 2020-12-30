@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <div th:insert="navbar :: nav"/>
+    <title>Add a new address</title>
+</head>
+<body>
+<form action="#"  th:action="@{/meteo}" th:object="${address}" method="POST">
+    <div class="mb-3">
+        <label for="auteur" class="form-label">Auteur</label>
+        <input class="form-control" id="auteur" required="required" th:field="${address.auteur}">
+    </div>
+    <div class="mb-3">
+        <label for="content" class="form-label">Contenu</label>
+        <textarea class="form-control" id="content" rows="3" required="required" th:field="${address.content}"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary" href="adresses">Valider</button>
+    <input type="reset" class="btn btn-primary" value="Réinitialiser">
+</form>
+
+</body>
+</html>

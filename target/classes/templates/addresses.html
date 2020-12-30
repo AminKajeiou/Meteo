@@ -1,0 +1,23 @@
+<! DOCTYPE HTML >
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Adresses</title>
+    <meta http-equiv="Content-Type" content ="text/html;
+charset=UTF-8"/>
+    <div th:insert="navbar :: nav"></div>
+</head>
+<body>
+<h1>Les différentes adresses :</h1>
+<ul th:each="address : ${ allAddresses }">
+    <li>Adresse</li>
+    <ul>
+        <li>Auteur :</li>
+        <p th:text="${address.auteur}"></p>
+        <li>Adresse :</li>
+        <p th:text="${address.content}"></p>
+        <li>Date de création :</li>
+        <p th:text="${address.creation}"></p>
+    </ul>
+</ul>
+</body>
+</html>
